@@ -1,0 +1,83 @@
+#pragma once
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
+/*
+    Register Codes
+*/
+#define REG_IP 0x10
+#define REG_SI 0x11
+#define REG_ACC 0x12
+#define REG_SEC 0x13
+#define REG_SP 0x14
+
+
+/*
+    Operation Opcodes
+*/
+#define OPCODE_MOV_REG_IMM 0x01
+#define OPCODE_MOV_REG_IMM_SIZE 0x03
+
+#define OPCODE_MOV_REG_REG 0x02
+#define OPCODE_MOV_REG_REG_SIZE 0x03
+
+#define OPCODE_ADD_REG_IMM 0x03
+#define OPCODE_ADD_REG_IMM_SIZE 0x03
+
+#define OPCODE_ADD_REG_REG 0x04
+#define OPCODE_ADD_REG_REG_SIZE 0x03
+
+#define OPCODE_PUSH_IMM 0X05
+#define OPCODE_PUSH_IMM_SIZE 0X02
+
+#define OPCODE_PUSH_REG 0X06
+#define OPCODE_PUSH_REG_SIZE 0X02
+
+#define OPCODE_POP_REG 0X07
+#define OPCODE_POP_REG_SIZE 0X02
+
+#define OPCODE_SUB_REG_REG 0X08
+#define OPCODE_SUB_REG_REG_SIZE 0X03
+
+#define OPCODE_SUB_REG_IMM 0X09
+#define OPCODE_SUB_REG_IMM_SIZE 0X03
+
+#define OPCODE_AND_REG_REG 0X0A
+#define OPCODE_AND_REG_REG_SIZE 0X03
+
+#define OPCODE_AND_REG_IMM 0X0B
+#define OPCODE_AND_REG_IMM_SIZE 0X03
+
+#define OPCODE_OR_REG_REG 0X0C
+#define OPCODE_OR_REG_REG_SIZE 0X03
+
+#define OPCODE_OR_REG_IMM 0X0D
+#define OPCODE_OR_REG_IMM_SIZE 0X03
+
+#define OPCODE_XOR_REG_IMM 0x0E
+#define OPCODE_XOR_REG_IMM_SIZE 0x03
+
+#define OPCODE_XOR_REG_REG 0x0F
+#define OPCODE_XOR_REG_REG_SIZE 0x03
+
+#define OPCODE_PASS 0xFF
+#define OPCODE_PASS_SIZE 0x01
+
+
+#define OPCODE_HALT 0XFE
+#define OPCODE_HALT_SIZE 0X01
+
+/*
+    Operation Status
+*/
+#define OPCODE_INCOMPLETE 0xFF
+#define OPCODE_COMPLETE 0xFE
+#define OPCODE_INVALID 0xFD
+
+
+#ifdef __cplusplus
+}
+#endif
